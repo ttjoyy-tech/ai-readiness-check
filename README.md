@@ -41,12 +41,18 @@ Created by Tamara Marwood. Released under the [MIT licence](LICENSE): you may us
 
 ### Route 1: the button (easiest)
 
-1. Click **Deploy to Cloudflare** above and sign in to Cloudflare and GitHub when asked.
-2. Cloudflare copies this project into **your** GitHub account, creates a **Worker** (the site and its small server) and a **D1 database** for it, and deploys it. Accept the suggested names, or choose your own.
-3. If you are asked for `ADMIN_KEY`, enter a long random value (20 or more letters and numbers). It is the password for your results dashboard. If you are not asked, add it afterwards:
-   - Cloudflare dashboard, then **Workers & Pages**, your project, **Settings**, **Variables and Secrets**, **Add**. Choose type **Secret**, name `ADMIN_KEY`, and paste your value.
-4. Open the address Cloudflare gives you (it ends in `.workers.dev`). You should see the check.
-5. Make it yours: in your new GitHub copy, edit `public/config.json` (see below) and commit the change. Cloudflare redeploys by itself within a minute or two.
+1. Click **Deploy to Cloudflare** above and sign in to Cloudflare. It opens a setup screen called "Set up your application".
+2. Fill in the setup screen:
+   - **Git account:** connect your GitHub account when asked. Cloudflare copies this project into a new repository in your account.
+   - **Create private Git repository:** leave this ticked, so your copy is private.
+   - **Project name:** accept the suggestion or choose your own. It becomes part of your address.
+   - **D1 database:** leave it set to **new**. Cloudflare creates the database for you. The tables set themselves up the first time the site runs.
+   - **ADMIN_KEY:** enter a long random value (20 or more letters and numbers). It is the password for your results dashboard. Keep a copy somewhere private.
+   - **Enable Preview builds:** leave this **off** (see Troubleshooting).
+3. Click **Deploy**. When it finishes, Cloudflare shows your address, which ends in `.workers.dev`. Open it and you should see the check.
+4. Make it yours: in your new GitHub repository, edit `public/config.json` (see below) and commit the change. Cloudflare redeploys by itself within a minute or two.
+
+If the setup screen doesn't ask for `ADMIN_KEY`, add it afterwards: Cloudflare dashboard, **Workers & Pages**, your project, **Settings**, **Variables and Secrets**, **Add**. Choose type **Secret**, name `ADMIN_KEY`, and paste your value.
 
 ### Route 2: the command line
 
@@ -129,6 +135,7 @@ The wording shown to visitors is in `public/index.html`. **If you change any of 
 | The benchmark never appears | It stays hidden until 10 people have shared to the public room |
 | The PDF button does nothing | The PDF library loads from a public file host. Check your connection and any content blockers |
 | Changes don't appear | Hard refresh the page (Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows) |
+| A build on a branch fails with "missing a `previews` block" | Preview builds need a separate test database. Turn off **Preview builds** in your project's Settings, Builds, or only push to your main branch |
 
 ## Limits of the check
 
