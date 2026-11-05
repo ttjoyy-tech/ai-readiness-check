@@ -79,7 +79,7 @@ The privacy wording shown to visitors is in `public/index.html`. **If you change
 - It is a **self-report** and has not been formally validated. Treat a score as a snapshot and a conversation starter, not a measure of ability.
 - There is one question for each area, so area scores can only take four values.
 - The comparison figures describe organisations, not individuals, and any benchmark built from shared scores is self-selected, so it is not a representative sample.
-- The reference links and wording lean towards Australia (for example the OAIC and the Australian Government guidance). Replace them if you deploy elsewhere.
+- Some of the reference links (in the `PILLARS` and `REFS` lists in `public/index.html`) point to Australian sources, such as the OAIC and the Australian Government guidance. Replace them with sources that suit your audience and country.
 
 ## Costs
 

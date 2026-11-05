@@ -162,9 +162,9 @@ const QUESTIONS=[
    ["Most days, built into how I work",100],["Most weeks, for a few routine tasks",50],["I use it personally, outside work",50],["Once or twice, mostly to see what it can do",25],["Not at all",0]]},
  {id:"q2",p:"skill",t:"An AI tool summarises a long report and the result reads well. What do you do before you share it?",o:[
    ["Check the key claims against the source and ask the tool to show where each came from",100],["Check the key figures and quotes against the source",50],["Read it through for anything that sounds off",25],["Share it. It reads well.",0]]},
- {id:"q3",p:"data",t:"You want AI help with a document that contains customer or patient details. What do you do?",o:[
+ {id:"q3",p:"data",t:"You want AI help with a document that contains customer, client or other personal details. What do you do?",o:[
    ["Use only an approved tool, remove identifying details, and check the policy if unsure",100],["Remove names and sensitive details and use whichever tool is quickest",50],["Remove names, but leave the rest in",25],["Paste it in. The tool is only helping me.",0]]},
- {id:"q4",p:"resp",t:"An AI tool produces a recommendation that affects a person, such as a hire, a customer or a patient. Who is accountable for it?",o:[
+ {id:"q4",p:"resp",t:"An AI tool produces a recommendation that affects a person, such as a hire, a customer or a client. Who is accountable for it?",o:[
    ["A named person who reviews it, can explain it and can override it",100],["Me, but I'd rarely check it in detail",50],["It's shared and not really clear",25],["The tool. That's why we use it.",0]]},
  {id:"q5",p:"mind",t:"Your organisation hasn't set clear AI rules yet. What do you do?",o:[
    ["Raise it with leaders and offer to help shape a small, safe pilot",100],["Use AI carefully for personal learning and keep work data out of it",50],["Wait until someone tells me what is allowed",25],["Use whatever tool I like. No rules means no limits.",0]]}
@@ -276,7 +276,7 @@ function viewIntro(){
     <p class="muted small">Your answers stay on your device. Nothing is sent or saved on a server, and no name or email is asked for. <a href="#about" data-view="about" style="color:var(--accent)">Read how this works</a>. After your result you can choose to share your scores anonymously, which is optional.</p>
     <h3 style="margin-top:8px">The five areas</h3>
     <div class="tablewrap"><table class="areas"><thead><tr><th>Area</th><th>What it covers</th><th>Why it matters</th><th>Source</th></tr></thead><tbody>${PILLARS.map(p=>`<tr><td class="n">${esc(p.name)}<span>${esc(p.why)}</span></td><td class="c">${esc(p.blurb)}</td><td>${esc(p.so)}</td><td class="src"><a href="${esc(p.ru)}" target="_blank" rel="noopener noreferrer">${esc(p.rt)}</a></td></tr>`).join("")}</tbody></table></div>
-    <p class="muted small" style="margin-top:14px"><b>Where the five areas come from.</b> They adapt the structure of Cisco&rsquo;s <a href="https://www.cisco.com/c/m/en_us/solutions/ai/readiness-index/methodology.html" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">AI Readiness Index</a>, which scores organisations across six pillars (strategy, infrastructure, data, governance, talent and culture) using 49 indicators and four readiness tiers. Cisco measures organisations. This check turns those ideas into what one person does, and the sources above show why each area matters in Australia. The tier cut-offs follow Cisco. The questions and scoring are original. It is a self-check, not a formal assessment. Your result is set beside published figures and, once enough people have chosen to share their scores, beside their average. Neither group is a representative sample, so read the comparison as context.</p>
+    <p class="muted small" style="margin-top:14px"><b>Where the five areas come from.</b> They adapt the structure of Cisco&rsquo;s <a href="https://www.cisco.com/c/m/en_us/solutions/ai/readiness-index/methodology.html" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">AI Readiness Index</a>, which scores organisations across six pillars (strategy, infrastructure, data, governance, talent and culture) using 49 indicators and four readiness tiers. Cisco measures organisations. This check turns those ideas into what one person does, and the sources above show why each area matters. The tier cut-offs follow Cisco. The questions and scoring are original. It is a self-check, not a formal assessment. Your result is set beside published figures and, once enough people have chosen to share their scores, beside their average. Neither group is a representative sample, so read the comparison as context.</p>
     ${e?"":`<div><button class="btn" data-act="start">Start the check</button></div>`}</div>`;
 }
 function viewAbout(){
@@ -402,7 +402,7 @@ function viewInfo(){
   <section><h3>What it is</h3>
     <p>The AI Readiness Check is a 5-question self-assessment of how ready you are to use AI well, safely and responsibly in your own work. It scores you out of 100 across five areas (everyday use, skills and judgement, data and security, responsible use, and mindset and support) and places you in one of four tiers: Starting, Building, Leading or Pacesetting. A separate question records whether your workplace lets you use AI, so a low score caused by workplace rules can be told apart from a skills gap. It is meant to show where support and training would help most, not to judge anyone.</p></section>
   <section><h3>How it was created</h3>
-    <p>The question set was drafted by Claude, Anthropic's AI assistant, working to a brief from the survey owner. The five areas adapt the pillar structure of the Cisco AI Readiness Index, which measures organisations across six pillars (strategy, infrastructure, data, governance, talent, culture). Strategy, infrastructure and culture were translated to what an individual does, and the scoring approach was kept: full practice earns 100%, partial practice 25-50%, none 0%. The four tiers use the same cut-offs, with friendlier names (Pacesetting 86 or above, Leading 61-85, Building 31-60, Starting 0-30).</p>
+    <p>The question set was drafted with the help of an AI assistant, working to a brief from the author of this open-source check. The five areas adapt the pillar structure of the Cisco AI Readiness Index, which measures organisations across six pillars (strategy, infrastructure, data, governance, talent, culture). Strategy, infrastructure and culture were translated to what an individual does, and the scoring approach was kept: full practice earns 100%, partial practice 25-50%, none 0%. The four tiers use the same cut-offs, with friendlier names (Pacesetting 86 or above, Leading 61-85, Building 31-60, Starting 0-30).</p>
     <p>Each area has one scenario question, and the overall score is the average of the five areas, rounded to a whole number. This short version is a conversation starter, not a full assessment. The wording and scoring of the questions are original to this check; they were not copied from any of those reports.</p></section>
   <section><h3>Privacy and security</h3>
     <ul>
@@ -624,27 +624,7 @@ document.addEventListener("change",ev=>{
 S.step=-1;
 loadConfig().then(()=>{document.title=CFG.title;render()});
 loadBenchmarks();
-(async()=>{
-  const c=window.claude;
-  if(!c||!c.use){return}
-  try{
-    const [db,user,dl]=await Promise.all([c.use("db"),c.use("user"),c.use("downloads")]);
-    S.db=db;S.user=user;S.dl=dl;
-    if(user){try{S.uid=await user.id()}catch(e){}try{S.canEdit=!!user.canEdit()}catch(e){}}
-    if(db&&S.uid){
-      try{
-        const snap=await db.doc("responses/"+S.uid).get();
-        if(snap.exists){const d=cleanRow(snap.data());S.existing={overall:d.overall,tier:d.tier,ts:d.ts,full:{q:d.q,pillars:d.pillars,overall:d.overall,tier:d.tier}}}
-      }catch(e){}
-    }
-    if(db&&S.canEdit){
-      db.collection("responses").onSnapshot(snap=>{S.rows=snap.docs.map(d=>cleanRow(d.data()||{}));if(S.view==="results")render()},()=>{});
-    }
-    if(S.canEdit&&location.hash==="#results")S.view="results";
-    else if(location.hash==="#about")S.view="about";
-  }catch(e){}
-  render();
-})();
+if(location.hash==="#about")S.view="about";
 </script>
 
 </body></html>
