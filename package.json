@@ -1,0 +1,14 @@
+{
+  "name": "ai-readiness-check",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A free, two-minute AI readiness self-check with an optional anonymous benchmark, deployable to Cloudflare Workers with a D1 database.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}

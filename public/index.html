@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>AI Readiness Check</title>
+<meta name="description" content="A two-minute check of how ready you are to use AI well, safely and responsibly in your own work: five questions, a score out of 100 across five areas, and specific advice to enhance your use of AI safely and responsibly. Your answers stay on your device." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#2b5a87" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AI Readiness Check" />
+<meta property="og:description" content="A two-minute check of how ready you are to use AI well, safely and responsibly in your own work: five questions, a score out of 100 across five areas, and specific advice to enhance your use of AI safely and responsibly. Your answers stay on your device." />
+<meta name="twitter:card" content="summary_large_image" />
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}.areas{width:100%;border-collapse:collapse;font-size:.92rem}
+.areas th,.areas td{white-space:normal;vertical-align:top;text-align:left;padding:12px 14px 12px 0;border-top:1px solid var(--line)}
+.areas th{font-size:.68rem}
+.areas td.n{font-weight:600;min-width:9rem}
+.areas td.n span{display:block;font-weight:400;font-size:.8rem;color:var(--ink-soft);margin-top:2px}
+.areas td.c{color:var(--ink-soft)}
+.areas .src{font-size:.7rem;line-height:1.4;color:var(--ink-soft)}
+.areas .src a{color:var(--ink-soft)}
+@media (max-width:640px){.areas thead{display:none}.areas tr{display:block;padding:14px 0;border-top:1px solid var(--line)}.areas td{display:block;border:0;padding:2px 0}.areas td.n{min-width:0}}
+</style>
+</head><body>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
+<style>
+/* Monochrome editorial, Montserrat Light capitals for headings, Lora italic never needed here. Square corners, hairlines, no shadows, no green. Ochre once per screen (header rule). Tier colours are a grey-to-denim-to-ink ramp built from tokens. */
+:root{
+  --bg:#fbfaf7; --surface:#efeeea; --ink:#15181a; --ink-soft:#5b5f60; --line:#dcdbd5;
+  --accent:#2b5a87; --accent-ink:#ffffff; --accent-tint:#dfe8f0; --ochre:#b8731c; --sage:#d3ddd6;
+  --t-lag:var(--ink-soft);
+  --t-fol:color-mix(in srgb,var(--accent) 55%,var(--ink-soft));
+  --t-cha:var(--accent);
+  --t-pace:var(--ink);
+  --tint-lag:color-mix(in srgb,var(--t-lag) 14%,var(--surface));
+  --tint-fol:color-mix(in srgb,var(--t-fol) 14%,var(--surface));
+  --tint-cha:color-mix(in srgb,var(--t-cha) 14%,var(--surface));
+  --tint-pace:color-mix(in srgb,var(--t-pace) 14%,var(--surface));
+  --f-body:"Montserrat",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  --f-display:var(--f-body); --f-mono:var(--f-body);
+  --col:42rem; --col-wide:66rem;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#101315; --surface:#181c1f; --ink:#f1efe9; --ink-soft:#a5a8a8; --line:#2a2f32;
+    --accent:#8fb4d9; --accent-ink:#101315; --accent-tint:#1b2733; --ochre:#e0a04a; --sage:#25302b;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101315; --surface:#181c1f; --ink:#f1efe9; --ink-soft:#a5a8a8; --line:#2a2f32;
+  --accent:#8fb4d9; --accent-ink:#101315; --accent-tint:#1b2733; --ochre:#e0a04a; --sage:#25302b;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;border-radius:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75;
+  padding-block:0 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:var(--col);margin:0 auto;display:flex;flex-direction:column;gap:28px}
+.wrap.wide{max-width:var(--col-wide)}
+h1,h2,h3{font-family:var(--f-display);font-weight:300;text-transform:uppercase;letter-spacing:.05em;margin:0;text-wrap:balance;line-height:1.25}
+h1{font-size:clamp(1.3rem,4vw,1.7rem);letter-spacing:.2em}
+h2{font-size:clamp(1.2rem,3vw,1.5rem)}
+h3{font-size:1rem}
+p{margin:0}
+a{color:var(--accent)}
+.muted{color:var(--ink-soft)}
+.small{font-size:.85rem;line-height:1.6}
+.mono{font-variant-numeric:tabular-nums}
+header.top{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:baseline;justify-content:space-between;
+  padding-block:20px 16px;margin-bottom:8px;border-bottom:2px solid var(--ochre)}
+.tabs{display:flex;gap:18px;flex-wrap:wrap}
+.tabs button{border:0;border-bottom:1px solid transparent;background:transparent;color:var(--ink-soft);font:500 .7rem var(--f-body);
+  letter-spacing:.14em;text-transform:uppercase;padding:6px 0;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+button:focus-visible,select:focus-visible,input:focus-visible+span,label.opt:has(input:focus-visible),a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card{background:transparent;border:0;border-top:1px solid var(--line);padding:28px 0 0;display:flex;flex-direction:column;gap:18px;min-width:0}
+.btn{font:500 .72rem var(--f-body);letter-spacing:.16em;text-transform:uppercase;padding:13px 22px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn[disabled]{opacity:.4;cursor:not-allowed}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.row.between{justify-content:space-between}
+.progress{height:2px;background:var(--line);overflow:hidden}
+.progress i{display:block;height:100%;background:var(--ink);transition:width .25s}
+.eyebrow{font:500 .68rem var(--f-body);letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)}
+fieldset{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;min-width:0}
+legend{font-family:var(--f-body);font-weight:500;font-size:1rem;line-height:1.5;padding:0;margin-bottom:12px;text-wrap:balance}
+label.opt{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);cursor:pointer;font-size:.95rem;line-height:1.55}
+label.opt input{margin-top:5px;accent-color:var(--accent);flex:none}
+label.opt.on{border-color:var(--accent);background:var(--accent-tint)}
+.qs{display:flex;flex-direction:column;gap:30px}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.fields label{display:flex;flex-direction:column;gap:8px;font-weight:500;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+select{font:400 1rem var(--f-body);letter-spacing:0;text-transform:none;padding:11px 12px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.score{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px}
+.score .n{font:300 4.5rem/1 var(--f-body);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.pill{display:inline-block;padding:4px 12px;font:500 .68rem var(--f-body);letter-spacing:.14em;text-transform:uppercase}
+.pill.lag{background:var(--tint-lag);color:var(--ink)} .pill.fol{background:var(--tint-fol);color:var(--ink)}
+.pill.cha{background:var(--tint-cha);color:var(--ink)} .pill.pace{background:var(--tint-pace);color:var(--ink)}
+.pill{border-left:3px solid var(--ink-soft)}
+.pill.lag{border-left-color:var(--t-lag)} .pill.fol{border-left-color:var(--t-fol)} .pill.cha{border-left-color:var(--t-cha)} .pill.pace{border-left-color:var(--t-pace)}
+.prow{display:grid;grid-template-columns:minmax(120px,190px) 1fr 44px;gap:6px 16px;align-items:center}
+.prow .nm{font-weight:500;font-size:.9rem}
+.track{position:relative;height:10px;
+  background:linear-gradient(90deg,var(--tint-lag) 0 30.5%,var(--tint-fol) 30.5% 60.5%,var(--tint-cha) 60.5% 85.5%,var(--tint-pace) 85.5% 100%)}
+.track .fill{position:absolute;inset:0 auto 0 0;transition:width .4s;border-right:2px solid var(--bg)}
+.fill.lag{background:var(--t-lag)} .fill.fol{background:var(--t-fol)} .fill.cha{background:var(--t-cha)} .fill.pace{background:var(--t-pace)}
+.scale{display:grid;grid-template-columns:minmax(120px,190px) 1fr 44px;gap:16px;font:500 .7rem var(--f-body);color:var(--ink-soft)}
+.scale div{position:relative;height:14px}
+.scale span{position:absolute;transform:translateX(-50%)}
+.strip{display:flex;height:32px;border:1px solid var(--line)}
+.strip div{display:flex;align-items:center;justify-content:center;font:500 .72rem var(--f-body);color:var(--bg);min-width:0;overflow:hidden}
+.strip .lag{background:var(--t-lag)} .strip .fol{background:var(--t-fol)} .strip .cha{background:var(--t-cha)} .strip .pace{background:var(--t-pace)}
+:root[data-theme="dark"] .strip .cha,:root[data-theme="dark"] .strip .fol{color:var(--bg)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.8rem;color:var(--ink-soft)}
+.legend i{display:inline-block;width:10px;height:10px;margin-right:7px;vertical-align:-1px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.tile{background:var(--bg);padding:16px;display:flex;flex-direction:column;gap:4px}
+.tile .v{font:300 2.2rem/1.1 var(--f-body);font-variant-numeric:tabular-nums}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{text-align:left;padding:10px 12px 10px 0;border-top:1px solid var(--line);white-space:nowrap}
+th{font:500 .68rem var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+td.num,th.num{text-align:right}
+ul.tips{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:8px}
+.note{font-size:.82rem;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:14px}
+.empty{border:1px solid var(--line);padding:26px;text-align:center;color:var(--ink-soft)}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 18px;font-size:.88rem;opacity:0;pointer-events:none;transition:opacity .2s;max-width:90vw}
+#toast.show{opacity:1}
+.info{gap:26px}
+.info section{display:flex;flex-direction:column;gap:10px}
+.info ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:8px}
+.info a,.linkcard a{color:var(--accent);text-underline-offset:2px;overflow-wrap:anywhere}
+.refs li{overflow-wrap:anywhere}
+.linkcard{border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:4px}
+@media (max-width:520px){.prow,.scale{grid-template-columns:1fr 44px}.prow .nm{grid-column:1/-1}.scale{display:none}.score .n{font-size:3.4rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+"use strict";
+/* Branding and contact details come from /config.json (see README). These are the neutral defaults. */
+const CFG={title:"AI Readiness Check",owner:"",organisation:"",email:"",website:"",bookingUrl:"",bookingHeading:"Want to talk it through?",bookingButton:"Book a time"};
+async function loadConfig(){try{const r=await fetch("/config.json",{cache:"no-cache"});if(r.ok)Object.assign(CFG,await r.json())}catch(e){}}
+/* ---------- Configuration ---------- */
+const PILLARS=[
+  {id:"use",  name:"Everyday use",        blurb:"How AI shows up in your real work",why:"Practice builds confidence",rt:"National AI Centre: AI adoption tracker",ru:"https://www.ai.gov.au/news-and-insights/ai-adoption-tracker",so:"Regular use is how you learn what AI does well and where it slips. Trying it once or twice doesn't build that."},
+  {id:"skill",name:"Skills & judgement",  blurb:"Getting good results and knowing when to doubt them",why:"Checking catches errors",rt:"Workera: 2026 AI Skills Enterprise Benchmark",ru:"https://www.workera.ai/guides-reports/what-88-000-assessments-reveal-about-enterprise-ai-readiness",so:"AI can sound confident and be wrong. Checking its work is what stops mistakes reaching other people."},
+  {id:"data", name:"Data & security",     blurb:"Handling information safely",why:"Protect people's information",rt:"OAIC: privacy and commercially available AI products",ru:"https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products",so:"Pasting the wrong thing into the wrong tool can expose customers, patients or your organisation."},
+  {id:"resp", name:"Responsible use",     blurb:"Accountability, honesty and risk awareness",why:"Accountability stays human",rt:"Australian Government: Guidance for AI Adoption",ru:"https://www.industry.gov.au/publications/guidance-ai-adoption",so:"When AI helps decide something about a person, someone has to be able to explain it and answer for it."},
+  {id:"mind", name:"Mindset & support",   blurb:"Learning habits and the backing you have",why:"Leadership enables change",rt:"Microsoft 2026 Work Trend Index, Australian findings",ru:"https://itbrief.com.au/story/microsoft-survey-warns-australian-firms-lag-on-ai-governance",so:"Even skilled people stall without time, permission and a leader who backs them."}
+];
+/* Each option is [text, credit]. Credit follows the Cisco method: 100 full, 25-50 partial, 0 none. */
+const QUESTIONS=[
+ {id:"q1",p:"use",t:"Think about the last two weeks. How has AI been part of your work or daily routine?",o:[
+   ["Most days, built into how I work",100],["Most weeks, for a few routine tasks",50],["I use it personally, outside work",50],["Once or twice, mostly to see what it can do",25],["Not at all",0]]},
+ {id:"q2",p:"skill",t:"An AI tool summarises a long report and the result reads well. What do you do before you share it?",o:[
+   ["Check the key claims against the source and ask the tool to show where each came from",100],["Check the key figures and quotes against the source",50],["Read it through for anything that sounds off",25],["Share it. It reads well.",0]]},
+ {id:"q3",p:"data",t:"You want AI help with a document that contains customer or patient details. What do you do?",o:[
+   ["Use only an approved tool, remove identifying details, and check the policy if unsure",100],["Remove names and sensitive details and use whichever tool is quickest",50],["Remove names, but leave the rest in",25],["Paste it in. The tool is only helping me.",0]]},
+ {id:"q4",p:"resp",t:"An AI tool produces a recommendation that affects a person, such as a hire, a customer or a patient. Who is accountable for it?",o:[
+   ["A named person who reviews it, can explain it and can override it",100],["Me, but I'd rarely check it in detail",50],["It's shared and not really clear",25],["The tool. That's why we use it.",0]]},
+ {id:"q5",p:"mind",t:"Your organisation hasn't set clear AI rules yet. What do you do?",o:[
+   ["Raise it with leaders and offer to help shape a small, safe pilot",100],["Use AI carefully for personal learning and keep work data out of it",50],["Wait until someone tells me what is allowed",25],["Use whatever tool I like. No rules means no limits.",0]]}
+];
+const TEAMS=["Health & community services","Government & public sector","Education & research","Finance & professional services","Technology","Other private sector","Own business or consulting","Other"];
+const LEVELS=["Emerging leader","Senior leader","Executive or board"];
+const ACCESS=["Yes, approved tools","Limited or restricted","No, not allowed","Not sure"];
+const TIERS=[
+  {k:"Pacesetting",min:86,label:"Ready to lead",c:"pace",say:"You use AI confidently and safely, and others can learn from how you work."},
+  {k:"Leading",min:61,label:"Hitting your stride",c:"cha",say:"You have solid habits in place. A few gaps are worth closing."},
+  {k:"Building",min:31,label:"Building confidence",c:"fol",say:"You've started, but practice and guardrails are patchy."},
+  {k:"Starting",min:0,label:"Early days",c:"lag",say:"AI isn't part of your work yet. Small, safe steps will move you quickly."}
+];
+const TIPS={
+  use:["Pick one task you repeat every week and run it through an approved AI tool. Note the time saved and what you had to fix.","Write down one workflow that works for you and share it with your team."],
+  skill:["Next time you use AI, give it context, an example and the format you want, then check key claims against the source.","Keep a short list of tasks where AI needs a human check, and share it."],
+  data:["Find your organisation's list of approved AI tools and the rules for what data each may handle. Ask if you can't find it.","Make a habit of removing identifying details before you paste anything into an AI tool."],
+  resp:["Agree with your team when and how you say AI helped with a piece of work.","For any AI-assisted decision about a person, name who reviews it and can override it."],
+  mind:["Set aside 30 minutes a fortnight for hands-on practice with a real task.","Ask your manager what support, training or time exists, and share what you learn."]
+};
+const MIN_GROUP=5;
+const BENCH_MIN=10;
+/* Business page shown on the About tab. Fill in url (and name) to show the link. */
+const BUSINESS={name:"",url:""};
+const REFS=[
+  {t:"Cisco AI Readiness Index methodology (the tiers and cut-offs this check adapts)",u:"https://www.cisco.com/c/m/en_us/solutions/ai/readiness-index/methodology.html"},
+  {t:"National AI Centre, AI adoption tracker (everyday use)",u:"https://www.ai.gov.au/news-and-insights/ai-adoption-tracker"},
+  {t:"Workera, 2026 AI Skills Enterprise Benchmark (skills and judgement)",u:"https://www.workera.ai/guides-reports/what-88-000-assessments-reveal-about-enterprise-ai-readiness"},
+  {t:"Office of the Australian Information Commissioner, Guidance on privacy and the use of commercially available AI products (data and security)",u:"https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products"},
+  {t:"Australian Government, Guidance for AI Adoption, October 2025 (responsible use)",u:"https://www.industry.gov.au/publications/guidance-ai-adoption"},
+  {t:"Microsoft 2026 Work Trend Index, Australian findings, reported by IT Brief (mindset and support)",u:"https://itbrief.com.au/story/microsoft-survey-warns-australian-firms-lag-on-ai-governance"},
+  {t:"NIST AI Risk Management Framework (general reference for governing AI)",u:"https://www.nist.gov/itl/ai-risk-management-framework"}
+];
+/* Published benchmarks. Organisation-level or survey-level, not individual scores; shown for context only. */
+const BENCH={
+  ciscoInaugural:{name:"Cisco AI Readiness Index, inaugural edition",dist:{Pacesetting:14,Leading:34,Building:48,Starting:4},note:"8,161 senior business and IT leaders; organisations with 500+ staff."},
+  cisco2025:{name:"Cisco AI Readiness Index 2025",pacesetters:13,note:"Over 8,000 leaders, 30 markets. About 13% of organisations rated Pacesettings (score 86 or above)."},
+  skillsoft2026:{name:"Skillsoft Workforce Readiness Report: AI Edition, June 2026",note:"2,000 workers in North America, UK and Germany. About 1 in 4 employees feel equipped for AI."},
+  workera2026:{name:"Workera 2026 AI Skills Enterprise Benchmark",note:"88,753 assessments. 13% of employees assessed as Accomplished in agentic AI skills before any upskilling."}
+};
+
+/* ---------- Helpers ---------- */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const tierOf=n=>TIERS.find(t=>n>=t.min);
+const avg=a=>a.reduce((x,y)=>x+y,0)/a.length;
+const r1=n=>Math.round(n*10)/10;
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove("show"),3200)}
+
+function compute(ans){
+  const q={};QUESTIONS.forEach(x=>{q[x.id]=x.o[ans[x.id]][1]});
+  const pillars={};
+  PILLARS.forEach(p=>{const qs=QUESTIONS.filter(x=>x.p===p.id);pillars[p.id]=r1(avg(qs.map(x=>q[x.id])))});
+  const overall=Math.round(avg(PILLARS.map(p=>pillars[p.id])));
+  return {q,pillars,overall,tier:tierOf(overall).k};
+}
+function cleanRow(d){
+  const num=v=>{v=Number(v);return isFinite(v)?Math.max(0,Math.min(100,v)):0};
+  const q={},pillars={};
+  QUESTIONS.forEach(x=>q[x.id]=num(d.q&&d.q[x.id]));
+  PILLARS.forEach(p=>pillars[p.id]=num(d.pillars&&d.pillars[p.id]));
+  const overall=Math.round(num(d.overall));
+  return {ts:typeof d.ts==="string"?d.ts.slice(0,10):"",team:TEAMS.includes(d.team)?d.team:"Other",level:LEVELS.includes(d.level)?d.level:LEVELS[0],access:ACCESS.includes(d.access)?d.access:"Not sure",overall,tier:tierOf(overall).k,pillars,q};
+}
+function aggregate(rows){
+  if(!rows.length)return null;
+  const tierCounts={Pacesetting:0,Leading:0,Building:0,Starting:0};rows.forEach(r=>tierCounts[r.tier]++);
+  const pill={};PILLARS.forEach(p=>pill[p.id]=avg(rows.map(r=>r.pillars[p.id])));
+  const qavg={};QUESTIONS.forEach(x=>qavg[x.id]=avg(rows.map(r=>r.q[x.id])));
+  return {n:rows.length,overall:avg(rows.map(r=>r.overall)),tierCounts,pill,qavg};
+}
+function groupRows(rows,key,list){
+  return list.map(g=>{const rs=rows.filter(r=>r[key]===g);return {g,n:rs.length,avg:rs.length?avg(rs.map(r=>r.overall)):null}}).filter(x=>x.n>0);
+}
+
+/* ---------- State ---------- */
+const ROOM=(()=>{try{const r=(new URLSearchParams(location.search).get("room")||"").toLowerCase().trim();if(/^[a-z0-9][a-z0-9-]{2,39}$/.test(r))return r;return ""}catch(e){return ""}})();
+const SHARE_ROOM=ROOM||"open";
+const S={shared:false,view:"take",step:0,team:"",level:"",access:"",ans:{},result:null,existing:null,db:null,user:null,dl:null,uid:null,canEdit:false,rows:[],saveMsg:"",loaded:false};
+const STEPS=PILLARS.length+1;
+
+/* ---------- Views ---------- */
+function bandRow(label,v){
+  const t=tierOf(Math.round(v));
+  const pp=PILLARS.find(x=>x.name===label);
+  return `<div class="prow"><div class="nm">${esc(label)}${pp?`<br><span class="muted small" style="font-weight:400">${esc(pp.why)}</span>`:""}</div>
+    <div class="track" role="img" aria-label="${esc(label)}: ${Math.round(v)} out of 100, ${t.k} range"><div class="fill ${t.c}" style="width:${Math.max(2,v)}%"></div></div>
+    <div class="mono" style="text-align:right">${Math.round(v)}</div></div>`;
+}
+const scaleRow=()=>`<div class="scale" aria-hidden="true"><div></div><div><span style="left:30.5%">31</span><span style="left:60.5%">61</span><span style="left:85.5%">86</span></div><div></div></div>`;
+function stripHTML(dist,total){
+  return `<div class="strip">`+TIERS.slice().reverse().map(t=>{
+    const pct=total?dist[t.k]/total*100:dist[t.k];
+    return pct>0?`<div class="${t.c}" style="width:${pct}%" title="${t.k}: ${Math.round(pct)}%">${pct>=8?Math.round(pct)+"%":""}</div>`:"";
+  }).join("")+`</div>`;
+}
+const legendHTML=()=>`<div class="legend">`+TIERS.slice().reverse().map(t=>`<span><i style="background:var(--t-${t.c})"></i>${t.k} (${t.k==="Starting"?"30 or below":t.min+"+"})</span>`).join("")+`</div>`;
+
+function viewIntro(){
+  const e=S.existing;
+  const welcome=e?`<div class="card"><h3>You've already taken this check</h3>
+    <p class="muted">Your last result was <b class="mono">${e.overall}</b> (${esc(e.tier)}) on ${esc(e.ts)}. Retaking replaces it on the team dashboard.</p>
+    <div class="row"><button class="btn" data-act="showprev">View my result</button><button class="btn ghost" data-act="start">Retake</button></div></div>`:"";
+  return `${welcome}<div class="card">
+    <div class="eyebrow">5 questions · about 2 minutes</div>
+    <h2>How ready are you to use AI well, safely and responsibly in your own work?</h2>
+    <p class="muted">Five everyday situations with AI, and about two minutes to think them through. Choose the answer closest to what you actually do. There are no wrong answers, only a clear way to understand how you use AI. You&rsquo;ll get your score out of 100 across five areas, plus practical next steps picked for you, like trying one weekly task with an approved AI tool, checking key claims against the source, or finding out which data your workplace allows in AI tools. Ready to see where you stand?</p>
+    ${e?"":`<div><button class="btn" data-act="start">Start the check</button></div>`}
+    <p class="muted small">Your answers stay on your device. Nothing is sent or saved on a server, and no name or email is asked for. <a href="#about" data-view="about" style="color:var(--accent)">Read how this works</a>. After your result you can choose to share your scores anonymously, which is optional.</p>
+    <h3 style="margin-top:8px">The five areas</h3>
+    <div class="tablewrap"><table class="areas"><thead><tr><th>Area</th><th>What it covers</th><th>Why it matters</th><th>Source</th></tr></thead><tbody>${PILLARS.map(p=>`<tr><td class="n">${esc(p.name)}<span>${esc(p.why)}</span></td><td class="c">${esc(p.blurb)}</td><td>${esc(p.so)}</td><td class="src"><a href="${esc(p.ru)}" target="_blank" rel="noopener noreferrer">${esc(p.rt)}</a></td></tr>`).join("")}</tbody></table></div>
+    <p class="muted small" style="margin-top:14px"><b>Where the five areas come from.</b> They adapt the structure of Cisco&rsquo;s <a href="https://www.cisco.com/c/m/en_us/solutions/ai/readiness-index/methodology.html" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">AI Readiness Index</a>, which scores organisations across six pillars (strategy, infrastructure, data, governance, talent and culture) using 49 indicators and four readiness tiers. Cisco measures organisations. This check turns those ideas into what one person does, and the sources above show why each area matters in Australia. The tier cut-offs follow Cisco. The questions and scoring are original. It is a self-check, not a formal assessment. Your result is set beside published figures and, once enough people have chosen to share their scores, beside their average. Neither group is a representative sample, so read the comparison as context.</p>
+    ${e?"":`<div><button class="btn" data-act="start">Start the check</button></div>`}</div>`;
+}
+function viewAbout(){
+  return `<div class="card"><h3>About you</h3><p class="muted small">Used only to group results and to separate what your workplace allows from what you do. Groups under ${MIN_GROUP} people are hidden on the dashboard.</p>
+    <div class="fields">
+      <label for="team">Sector<select id="team"><option value="">Choose one</option>${TEAMS.map(t=>`<option${S.team===t?" selected":""}>${esc(t)}</option>`).join("")}</select></label>
+      <label for="level">Seniority<select id="level"><option value="">Choose one</option>${LEVELS.map(t=>`<option${S.level===t?" selected":""}>${esc(t)}</option>`).join("")}</select></label>
+      <label for="access">Can you use AI tools at work?<select id="access"><option value="">Choose one</option>${ACCESS.map(t=>`<option${S.access===t?" selected":""}>${esc(t)}</option>`).join("")}</select></label>
+    </div></div>`;
+}
+function viewPillar(i){
+  const p=PILLARS[i-1],qs=QUESTIONS.filter(q=>q.p===p.id);
+  return `<div class="card"><div><div class="eyebrow">${esc(p.name)}</div><p class="muted small">${esc(p.blurb)}</p></div>
+    <div class="qs">${qs.map(q=>`<fieldset><legend>${esc(q.t)}</legend>${q.o.map((o,k)=>`<label class="opt${S.ans[q.id]===k?" on":""}"><input type="radio" name="${q.id}" value="${k}"${S.ans[q.id]===k?" checked":""}><span>${esc(o[0])}</span></label>`).join("")}</fieldset>`).join("")}</div></div>`;
+}
+function stepComplete(){
+  if(S.step===0)return !!S.team&&!!S.level&&!!S.access;
+  return QUESTIONS.filter(q=>q.p===PILLARS[S.step-1].id).every(q=>S.ans[q.id]!==undefined);
+}
+/* ---------- Benchmarks (data lives in /benchmarks.json) ---------- */
+let BM=null;
+function benchCard(res){
+  if(!BM)return "";
+  const t=tierOf(res.overall),pub=BM.published,own=BM.own;
+  let out=`<div class="card"><h3>How you compare</h3>`;
+  const mixes=[];
+  if(pub&&pub.tiers)mixes.push({label:pub.name+" (organisations)",dist:pub.tiers,total:100,pct:pub.tiers[t.k]});
+  const ref=BM.reference;
+  if(ref&&ref.tiers){const tot=Object.values(ref.tiers).reduce((x,y)=>x+y,0)||1;mixes.push({label:ref.label.charAt(0).toUpperCase()+ref.label.slice(1)+" ("+ref.n+" people)",dist:ref.tiers,total:tot,pct:Math.round((ref.tiers[t.k]||0)/tot*100)})}
+  if(mixes.length){
+    out+=`<p>Your result puts you in the <b>${esc(t.k)}</b> tier. Here is how each group is spread across the four tiers:</p>
+      ${mixes.map(m=>`<div style="margin:12px 0"><div class="small muted" style="margin-bottom:6px">${esc(m.label)}: <b>${m.pct}%</b> in ${esc(t.k)}</div>${stripHTML(m.dist,m.total)}</div>`).join("")}${legendHTML()}
+      <p class="small muted">The tier bands follow the Cisco AI Readiness Index, but the Cisco figures describe organisations, not individual people${pub?" ("+esc(pub.who)+")":""}, so use them as context rather than a ranking of you.${pub&&pub.url?` <a href="${esc(pub.url)}" target="_blank" rel="noopener noreferrer" style="color:var(--ink-soft)">Cisco source</a>.`:""}</p>`;
+  }
+  const groups=[];
+  if(BM.reference&&BM.reference.overall!=null)groups.push(BM.reference);
+  if(own&&own.n>=MIN_GROUP&&own.overall!=null)groups.push(own);
+  if(groups.length){
+    const cmp=g=>{const d=res.overall-Math.round(g.overall);const word=Math.abs(d)<=3?"in line with":d>0?"above":"below";return `<p>Your overall score of <b class="mono">${res.overall}</b> is ${word} the average of <b class="mono">${Math.round(g.overall)}</b> for ${esc(g.label)} (${g.n}).</p>`};
+    out+=`<h3 style="margin-top:14px">Compared with other groups</h3>${groups.map(cmp).join("")}
+      <div class="tablewrap"><table><thead><tr><th>Area</th><th class="num">You</th>${groups.map(g=>`<th class="num">${esc(g.short||"Average")} (${g.n})</th>`).join("")}</tr></thead><tbody>${PILLARS.map(p=>`<tr><td>${esc(p.name)}</td><td class="num mono">${Math.round(res.pillars[p.id])}</td>${groups.map(g=>`<td class="num mono">${g.areas&&g.areas[p.id]!=null?Math.round(g.areas[p.id]):"-"}</td>`).join("")}</tr>`).join("")}</tbody></table></div>
+      <p class="small muted">${groups.map(g=>g.note).filter(Boolean).map(esc).join(" ")}</p>`;
+  }
+  if(BM.facts&&BM.facts.length)out+=`<ul class="tips small muted" style="margin-top:12px">${BM.facts.map(f=>`<li>${esc(f.text)}${f.url?` <a href="${esc(f.url)}" target="_blank" rel="noopener noreferrer" style="color:var(--ink-soft)">Source</a>`:""}</li>`).join("")}</ul>`;
+  return out+`</div>`;
+}
+async function loadBenchmarks(){
+  try{const r=await fetch("/benchmarks.json",{cache:"no-cache"});if(r.ok)BM=await r.json()}catch(e){}
+  try{
+    const r=await fetch("/api/ai-check/benchmark");
+    if(r.ok){const d=await r.json();if(d.ready){BM=BM||{};BM.own={label:"people who chose to share their scores",short:"Shared scores",note:"People who chose to share their scores are not a representative sample.",n:d.n,overall:d.overall,areas:d.areas,live:true}}}
+  }catch(e){}
+  if(BM&&S.result)render();
+}
+
+function shareCard(){
+  const open=!ROOM;
+  const title=open?"Add your scores to the benchmark (optional)":"Share your scores anonymously (optional)";
+  if(S.shared)return `<div class="card"><h3>${title}</h3><p>Thank you. Your scores were shared anonymously${open?" and will count towards the benchmark once enough people have shared":""}. Your own result stays on this screen.</p></div>`;
+  const notice=open?`
+        <p><b>Who collects it:</b> ${esc(CFG.organisation||CFG.owner||"the operator of this site")}.</p>
+        <p><b>What is collected:</b> your overall score, your five area scores, the time you share them and the three details you gave at the start: your sector, your seniority and whether your workplace lets you use AI tools. No name, no email and none of your answers to the questions is stored.</p>
+        <p><b>Why:</b> to build a benchmark so people can compare their result with others. Only averages are ever shown to anyone, and only once at least ${BENCH_MIN} people have shared. The group is self-selected, so it is not a representative sample.</p>
+        <p><b>How long:</b> kept securely on Cloudflare and deleted automatically after 12 months. To limit repeat submissions, a scrambled version of your network address is used to count shares per day and is deleted after 3 days. Your address itself is not stored.</p>
+        <p><b>Your choice:</b> sharing is voluntary and does not change your result. Because nothing identifies you, a shared score cannot be found or removed afterwards. ${CFG.email?`Questions: <a href="mailto:${esc(CFG.email)}" style="color:var(--accent)">${esc(CFG.email)}</a>.`:""}</p>`
+   :`
+        <p><b>Who collects it:</b> ${esc(CFG.organisation||CFG.owner||"the operator of this site")}.</p>
+        <p><b>What is collected:</b> your overall score, your five area scores, the time you share them and the three details you gave at the start (your sector, seniority and workplace AI access). Nothing else. No name, no email, none of your answers to the questions and no IP address is stored.</p>
+        <p><b>Why:</b> to understand where people taking this check are, so the check and any follow-up fit you. Only the operator of this site sees these results. They are not shown to other people.</p>
+        <p><b>How long:</b> kept securely on Cloudflare and deleted automatically after 30 days.</p>
+        <p><b>Your choice:</b> sharing is voluntary and does not change your result. Because nothing identifies you, a shared score cannot be found or removed afterwards. ${CFG.email?`Questions: <a href="mailto:${esc(CFG.email)}" style="color:var(--accent)">${esc(CFG.email)}</a>.`:""}</p>`;
+  return `<div class="card"><h3>${title}</h3>
+      <div class="muted small" style="display:flex;flex-direction:column;gap:6px">${notice}</div>
+      <label class="opt" for="shareok" style="cursor:pointer"><input type="checkbox" id="shareok"><span>I have read this and I agree to share my scores anonymously.</span></label>
+      <div class="row"><button class="btn" id="sharebtn" data-act="share" disabled>Share my scores</button></div></div>`;
+}
+function viewResult(res){
+  const t=tierOf(res.overall);
+  const sorted=PILLARS.slice().sort((a,b)=>res.pillars[a.id]-res.pillars[b.id]).slice(0,2);
+  return `<div class="card"><div class="eyebrow">Your result</div>
+      <div class="score"><span class="n">${res.overall}</span><span class="muted">out of 100</span><span class="pill ${t.c}">${t.k} · ${t.label}</span></div>
+      <p>${esc(t.say)}</p>${(S.access==="No, not allowed"||S.access==="Limited or restricted")?`<p class="small muted">You told us your workplace limits AI tools, so your everyday use score may reflect workplace rules rather than your skills.</p>`:""}</div>
+    <div class="card"><h3>By area</h3>
+      ${PILLARS.map(p=>bandRow(p.name,res.pillars[p.id])).join("")}${scaleRow()}${legendHTML()}</div>
+    ${benchCard(res)}
+    <div class="card"><h3>Where to focus next</h3>
+      ${sorted.map(p=>`<div><b>${esc(p.name)}</b> <span class="muted mono">${Math.round(res.pillars[p.id])}</span><ul class="tips">${TIPS[p.id].map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p class="small muted">Why it matters: ${esc(p.so)} <span style="font-size:.7rem">Source: <a href="${esc(p.ru)}" target="_blank" rel="noopener noreferrer" style="color:var(--ink-soft)">${esc(p.rt)}</a></span></p></div>`).join("")}
+      <p class="note">${esc(S.saveMsg)}</p></div>
+    ${CFG.bookingUrl?`<div class="card"><h3>${esc(CFG.bookingHeading)}</h3><div class="row"><a class="btn" href="${esc(CFG.bookingUrl)}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:inline-block">${esc(CFG.bookingButton)}</a></div></div>`:""}
+    ${shareCard()}
+    <div class="row"><button class="btn" data-act="pdf">Download PDF</button><button class="btn ghost" data-act="start">Retake</button></div>`;
+}
+
+function viewDash(){
+  const rows=S.rows,a=aggregate(rows);
+  const head=`<div class="row between"><div><h2>Team results</h2><p class="muted small">Live from the shared database. Visible to editors only.</p></div>
+    <div class="row"><button class="btn" data-act="xlsx"${a?"":" disabled"}>Download Excel</button><button class="btn ghost" data-act="csv"${a?"":" disabled"}>CSV</button></div></div>`;
+  if(!a)return `<div class="card">${head}<div class="empty">No responses yet. Share this page with your team (as Contributor access) and results appear here as people finish.</div></div>`;
+  const t=tierOf(Math.round(a.overall));
+  const weakest=QUESTIONS.slice().sort((x,y)=>a.qavg[x.id]-a.qavg[y.id]).slice(0,3);
+  const grp=(title,list)=>`<div class="card"><h3>${title}</h3><div class="tablewrap"><table><thead><tr><th>Group</th><th class="num">Responses</th><th class="num">Average</th></tr></thead><tbody>${list.map(x=>`<tr><td>${esc(x.g)}</td><td class="num mono">${x.n}</td><td class="num mono">${x.n>=MIN_GROUP?Math.round(x.avg):"hidden (under "+MIN_GROUP+")"}</td></tr>`).join("")}</tbody></table></div></div>`;
+  return `<div class="card">${head}
+      <div class="tiles">
+        <div class="tile"><span class="eyebrow">Responses</span><span class="v">${a.n}</span></div>
+        <div class="tile"><span class="eyebrow">Average score</span><span class="v">${Math.round(a.overall)}</span></div>
+        <div class="tile"><span class="eyebrow">Average tier</span><span class="v" style="font-size:1.3rem;padding-top:6px"><span class="pill ${t.c}">${t.k}</span></span></div>
+        <div class="tile"><span class="eyebrow">Pacesettings</span><span class="v">${Math.round(a.tierCounts.Pacesetting/a.n*100)}%</span></div>
+      </div></div>
+    <div class="card"><h3>Where the team sits</h3>
+      <div><div class="small muted" style="margin-bottom:6px">Your team (${a.n})</div>${stripHTML(a.tierCounts,a.n)}</div>
+      ${legendHTML()}
+</div>
+    <div class="card"><h3>Average by area</h3>${PILLARS.map(p=>bandRow(p.name,a.pill[p.id])).join("")}${scaleRow()}</div>
+    <div class="card"><h3>Lowest-scoring questions</h3>
+      ${weakest.map(q=>`<div class="row between" style="align-items:flex-start;flex-wrap:nowrap;gap:16px"><span>${esc(q.t)}<br><span class="muted small">${esc(PILLARS.find(p=>p.id===q.p).name)}</span></span><span class="mono">${Math.round(a.qavg[q.id])}</span></div>`).join("")}</div>
+    ${grp("Workplace AI access",groupRows(rows,"access",ACCESS))}${grp("By sector",groupRows(rows,"team",TEAMS))}${grp("By seniority",groupRows(rows,"level",LEVELS))}
+  `;
+}
+
+function viewInfo(){
+  const biz=BUSINESS.url?`<div class="linkcard"><span class="eyebrow">Created by</span><a href="${esc(BUSINESS.url)}" target="_blank" rel="noopener noreferrer">${esc(BUSINESS.name||BUSINESS.url)}</a></div>`:"";
+  return `<div class="card info"><div><div class="eyebrow">About this survey</div><h2>What this check is, and what happens to your answers</h2></div>
+  <section><h3>What it is</h3>
+    <p>The AI Readiness Check is a 5-question self-assessment of how ready you are to use AI well, safely and responsibly in your own work. It scores you out of 100 across five areas (everyday use, skills and judgement, data and security, responsible use, and mindset and support) and places you in one of four tiers: Starting, Building, Leading or Pacesetting. A separate question records whether your workplace lets you use AI, so a low score caused by workplace rules can be told apart from a skills gap. It is meant to show where support and training would help most, not to judge anyone.</p></section>
+  <section><h3>How it was created</h3>
+    <p>The question set was drafted by Claude, Anthropic's AI assistant, working to a brief from the survey owner. The five areas adapt the pillar structure of the Cisco AI Readiness Index, which measures organisations across six pillars (strategy, infrastructure, data, governance, talent, culture). Strategy, infrastructure and culture were translated to what an individual does, and the scoring approach was kept: full practice earns 100%, partial practice 25-50%, none 0%. The four tiers use the same cut-offs, with friendlier names (Pacesetting 86 or above, Leading 61-85, Building 31-60, Starting 0-30).</p>
+    <p>Each area has one scenario question, and the overall score is the average of the five areas, rounded to a whole number. This short version is a conversation starter, not a full assessment. The wording and scoring of the questions are original to this check; they were not copied from any of those reports.</p></section>
+  <section><h3>Privacy and security</h3>
+    <ul>
+      <li><b>Your answers stay on your device.</b> They are scored in your browser. Nothing is sent to a server, saved in a database or shared with anyone, including the author, unless you choose to share your scores (see the next point).</li>
+      <li><b>Optional sharing.</b> After your result you can choose to share your overall score and your five area scores anonymously, Your sector, seniority and workplace AI access, which you give at the start, are shared with them. They count towards a benchmark that shows averages only, once at least 10 people have shared, so you can compare your result with others. If you opened this page from a group link, they go only to the operator of this site instead, and are deleted after 30 days. Nothing is shared unless you tick the box and press the button. No name, email, IP address or answers are stored, and shared scores are deleted after 12 months. To limit repeat submissions, a scrambled version of your network address is used to count shares per day and is deleted after 3 days. Because nothing identifies you, a shared score cannot be removed afterwards.</li>
+      <li><b>No account, name or email is needed.</b> Reloading the page clears your answers, so download your PDF if you want to keep your result.</li>
+      <li><b>Cookies and fonts:</b> the page sets no advertising or tracking cookies. It loads its fonts from Google Fonts, which means your browser contacts Google to fetch them.</li>
+    </ul></section>
+  <section><h3>How your result is used</h3>
+    <ul>
+      <li>Your result is for you. It shows where you are strong and gives specific advice to enhance your use of AI safely and responsibly.</li>
+      <li>If you run this check in a group, you can compare results by a show of hands.</li>
+    </ul></section>
+  <section><h3>Limits of this check</h3>
+    <ul>
+      <li>It is a self-report. Skills-testing company Workera found verified AI skills often fall below what people report about themselves, so scores may run high.</li>
+      <li>It has not been formally validated or tested for reliability. Treat a score as a conversation starter and a snapshot, not a measurement of ability.</li>
+    </ul></section>
+  <section><h3>References</h3>
+    <ul class="refs">${REFS.map(r=>`<li>${esc(r.t)}. <a href="${esc(r.u)}" target="_blank" rel="noopener noreferrer">${esc(r.u)}</a></li>`).join("")}</ul></section>
+  ${biz}</div>`;
+}
+function render(){
+  const app=$("#app");
+  let body="";
+  if(S.view==="about")body=viewInfo();
+  else if(S.view==="results"&&S.canEdit)body=viewDash();
+  else if(S.result)body=viewResult(S.result);
+  else if(S.step===-1)body=viewIntro();
+  else{
+    const pct=Math.round(S.step/STEPS*100);
+    body=`<div class="progress" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><i style="width:${pct}%"></i></div>`+
+      (S.step===0?viewAbout():viewPillar(S.step))+
+      `<div class="row between"><button class="btn ghost" data-act="back">Back</button><button class="btn" data-act="next" id="next"${stepComplete()?"":" disabled"}>${S.step===STEPS-1?"See my result":"Next"}</button></div>`;
+  }
+  app.className="wrap"+(S.view==="results"&&S.canEdit?" wide":"");
+  app.innerHTML=`<header class="top"><div><h1>${esc(CFG.title)}</h1><p class="muted small">Five areas, scored out of 100${CFG.owner?` · by ${CFG.website?`<a href="${esc(CFG.website)}" style="color:var(--accent)">${esc(CFG.owner)}</a>`:esc(CFG.owner)}`:""}</p></div>
+    <nav class="tabs" aria-label="Views"><button data-view="take" aria-selected="${S.view==="take"}">Take the check</button>${S.canEdit?`<button data-view="results" aria-selected="${S.view==="results"}">Team results</button>`:""}<button data-view="about" aria-selected="${S.view==="about"}">About</button></nav></header>${body}`;
+}
+
+/* ---------- Data ---------- */
+async function saveResult(res){
+  {S.saveMsg="Your result stays on this device. Nothing is sent or saved anywhere. Download the PDF to keep it.";return}
+  const doc={v:1,ts:new Date().toISOString(),team:S.team,level:S.level,access:S.access,overall:res.overall,tier:res.tier,pillars:res.pillars,q:res.q,a:S.ans};
+  try{await S.db.doc("responses/"+S.uid).set(doc);S.existing={overall:res.overall,tier:res.tier,ts:doc.ts.slice(0,10)};S.saveMsg="Saved to the team dashboard under an internal ID, with your sector, seniority and workplace access but not your name."}
+  catch(e){S.saveMsg="Your result couldn't be saved to the team dashboard. Ask the page owner to give you Contributor access."}
+}
+
+/* ---------- Export ---------- */
+function exportAOA(rows){
+  const head=["Response #","Date","Sector","Seniority","Workplace AI access","Overall score","Tier",...PILLARS.map(p=>p.name),...QUESTIONS.map(q=>q.id)];
+  return [head,...rows.map((r,i)=>[i+1,r.ts,r.team,r.level,r.access,r.overall,r.tier,...PILLARS.map(p=>r.pillars[p.id]),...QUESTIONS.map(q=>r.q[q.id])])];
+}
+function csvText(aoa){return aoa.map(r=>r.map(c=>{c=String(c);return /[",\n]/.test(c)?'"'+c.replace(/"/g,'""')+'"':c}).join(",")).join("\r\n")}
+function buildWorkbook(rows){
+  const wb=XLSX.utils.book_new(),n=rows.length,last=n+1;
+  const resp=XLSX.utils.aoa_to_sheet(exportAOA(rows));resp["!cols"]=[{wch:11},{wch:11},{wch:24},{wch:22},{wch:13},{wch:12}];
+  XLSX.utils.book_append_sheet(wb,resp,"Responses");
+  const col=i=>XLSX.utils.encode_col(i);
+  const sum=[["Measure","Value"],["Responses",{f:`COUNTA(Responses!A2:A${last})`}],["Average score",{f:`AVERAGE(Responses!F2:F${last})`}]];
+  TIERS.slice().reverse().forEach(t=>sum.push([t.k+" (count)",{f:`COUNTIF(Responses!G2:G${last},"${t.k}")`}]));
+  sum.push([]);sum.push(["Area","Average"]);
+  PILLARS.forEach((p,i)=>sum.push([p.name,{f:`AVERAGE(Responses!${col(7+i)}2:${col(7+i)}${last})`}]));
+  XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(sum),"Summary");
+  const bt=[["Sector","Responses","Average score"],...groupRows(rows,"team",TEAMS).map(x=>[x.g,x.n,x.n>=MIN_GROUP?Math.round(x.avg):"hidden (under "+MIN_GROUP+")"]),[],["Seniority","Responses","Average score"],...groupRows(rows,"level",LEVELS).map(x=>[x.g,x.n,x.n>=MIN_GROUP?Math.round(x.avg):"hidden (under "+MIN_GROUP+")"])];
+  XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(bt),"By group");
+  const bench=[["Source","Detail"],...Object.values(BENCH).map(b=>[b.name,b.note]),[],["Tier","Minimum score","Cisco label"],...TIERS.slice().reverse().map(t=>[t.k,t.min,t.label]),[],["Inaugural Cisco distribution","% of organisations"],...TIERS.slice().reverse().map(t=>[t.k,BENCH.ciscoInaugural.dist[t.k]])];
+  
+  const qs=[["Question ID","Area","Question","Answer option","Credit"]];
+  QUESTIONS.forEach(q=>q.o.forEach(o=>qs.push([q.id,PILLARS.find(p=>p.id===q.p).name,q.t,o[0],o[1]])));
+  XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(qs),"Questions");
+  return wb;
+}
+function anchorSave(blob,name){if(/\.pdf$/i.test(name)&&!blob.type)blob=new Blob([blob],{type:"application/pdf"});const u=URL.createObjectURL(blob);const a=document.createElement("a");a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),4000)}
+async function saveFile(name,data){
+  try{if(S.dl)await S.dl.save({filename:name,data});else anchorSave(data instanceof Blob?data:new Blob([data]),name);toast("Saved "+name)}
+  catch(e){if(e&&e.code==="declined")return;toast("Couldn't save the file: "+((e&&e.message)||"unavailable"))}
+}
+
+/* ---------- PDF of the result (matches the on-screen result: score, tier, areas, next steps) ---------- */
+const RGB={lag:[91,95,96],fol:[65,92,118],cha:[43,90,135],pace:[21,24,26]};
+function buildPDF(res){
+  const {jsPDF}=window.jspdf;
+  const doc=new jsPDF({unit:"mm",format:"a4"});
+  const W=210,M=18,CW=W-2*M;
+  const INK=[21,24,26],MUT=[91,95,96],LINE=[220,219,213],OCHRE=[184,115,28],SURF=[239,238,234],BRAND=[43,90,135];
+  const tint=c=>c.map((v,i)=>Math.round(v*.14+SURF[i]*.86));
+  const t=tierOf(res.overall);
+  let y=M;
+  const need=h=>{if(y+h>284){doc.addPage();y=M}};
+  const txt=(s,x,yy,size,style,col,opt)=>{doc.setFont("helvetica",style||"normal");doc.setFontSize(size);doc.setTextColor(...(col||INK));doc.text(String(s),x,yy,opt)};
+  const caps=(s,x,yy,size,col)=>{doc.setCharSpace(.6);txt(String(s).toUpperCase(),x,yy,size,"normal",col);doc.setCharSpace(0)};
+  const para=(s,x,w,size,style,col,lh)=>{doc.setFont("helvetica",style||"normal");doc.setFontSize(size);doc.splitTextToSize(String(s),w).forEach(l=>{need(lh);txt(l,x,y,size,style,col);y+=lh})};
+  const heading=s=>{need(18);y+=3;doc.setDrawColor(...LINE);doc.setLineWidth(.3);doc.line(M,y,W-M,y);y+=8;caps(s,M,y,11,INK);y+=8};
+
+  const brandName=CFG.owner||CFG.title;caps(brandName,M,y,10,BRAND);
+  doc.setFont("helvetica","bold");doc.setCharSpace(.6);const bw0=doc.getTextWidth(brandName.toUpperCase())+brandName.length*.6;doc.setCharSpace(0);
+  caps("|  AI Readiness Check",M+bw0+2,y,10,INK);
+  txt(new Date().toLocaleDateString("en-AU",{day:"numeric",month:"long",year:"numeric"}),W-M,y,9,"normal",MUT,{align:"right"});
+  y+=4;doc.setDrawColor(...OCHRE);doc.setLineWidth(.8);doc.line(M,y,W-M,y);
+
+  y+=22;
+  doc.setFont("helvetica","normal");doc.setFontSize(54);
+  const nW=doc.getTextWidth(String(res.overall));
+  txt(res.overall,M,y,54,"normal",INK);
+  txt("out of 100",M+nW+4,y,12,"normal",MUT);
+  y+=9;
+  doc.setCharSpace(.5);doc.setFont("helvetica","bold");doc.setFontSize(8.5);
+  const pillText=(t.k+"  -  "+t.label).toUpperCase();
+  const pw=doc.getTextWidth(pillText)+pillText.length*.5+10;
+  doc.setCharSpace(0);
+  doc.setFillColor(...tint(RGB[t.c]));doc.rect(M,y-5.2,pw,7.6,"F");
+  doc.setFillColor(...RGB[t.c]);doc.rect(M,y-5.2,1.2,7.6,"F");
+  doc.setCharSpace(.5);txt(pillText,M+5,y,8.5,"bold",INK);doc.setCharSpace(0);
+  y+=10;
+  para(t.say,M,CW,11,"normal",INK,5.8);
+
+  heading("By area");
+  const x0=M+52,bw=CW-52-14,bands=[30.5,30,25,14.5],bc=["lag","fol","cha","pace"];
+  PILLARS.forEach(p=>{
+    need(11);
+    const v=res.pillars[p.id],pt=tierOf(Math.round(v));
+    txt(p.name,M,y,10,"bold",INK);
+    let bx=x0;
+    bands.forEach((b,i)=>{doc.setFillColor(...tint(RGB[bc[i]]));doc.rect(bx,y-3.4,bw*b/100,3.8,"F");bx+=bw*b/100});
+    doc.setFillColor(...RGB[pt.c]);doc.rect(x0,y-3.4,Math.max(1,bw*v/100),3.8,"F");
+    txt(Math.round(v),W-M,y,10,"bold",INK,{align:"right"});
+    y+=9;
+  });
+  [31,61,86].forEach(n=>txt(n,x0+bw*(n-.5)/100,y-3,7,"normal",MUT,{align:"center"}));
+  y+=3;
+  txt("Starting 0-30  |  Building 31-60  |  Leading 61-85  |  Pacesetting 86-100",M,y,8,"normal",MUT);
+  y+=4;
+
+  heading("Where to focus next");
+  PILLARS.slice().sort((a,b)=>res.pillars[a.id]-res.pillars[b.id]).slice(0,2).forEach(p=>{
+    need(26);
+    txt(p.name+"  ("+Math.round(res.pillars[p.id])+")",M,y,10.5,"bold",INK);
+    y+=5.8;
+    TIPS[p.id].forEach(tip=>{
+      const ls=doc.splitTextToSize(tip,CW-6);
+      need(ls.length*5.2+2);
+      txt("-",M+1,y,10,"normal",INK);
+      ls.forEach(l=>{txt(l,M+6,y,10,"normal",INK);y+=5.2});
+      y+=1.2;
+    });
+    y+=3;
+  });
+
+  need(26);
+  y+=2;doc.setDrawColor(...LINE);doc.setLineWidth(.3);doc.line(M,y,W-M,y);y+=5;
+  para("This check is a short self-assessment and has not been formally validated. Treat the score as a snapshot and a conversation starter, not a measure of ability. Tiers and cut-offs follow the Cisco AI Readiness Index, which measures organisations rather than individuals. Your result is confidential and is not used to rate individual performance.",M,CW,8,"normal",MUT,4);
+  y+=3;need(8);
+  doc.setFont("helvetica","bold");doc.setFontSize(9);doc.setTextColor(...BRAND);
+  if(CFG.website)doc.textWithLink("Take the check yourself or share it with your team: "+CFG.website.replace(/^https?:\/\//,""),M,y,{url:CFG.website});
+  const pages=doc.getNumberOfPages();
+  for(let i=1;i<=pages;i++){
+    doc.setPage(i);
+    doc.setDrawColor(...LINE);doc.setLineWidth(.3);doc.line(M,287,W-M,287);
+    txt(CFG.organisation||CFG.owner||"",M,292,8,"bold",BRAND);
+    doc.setFont("helvetica","normal");doc.setFontSize(8);doc.setTextColor(...MUT);
+    const em=CFG.email||"",web=(CFG.website||"").replace(/^https?:\/\//,""),sep=(em&&web)?"   |   ":"";
+    const ew=doc.getTextWidth(em),ww=doc.getTextWidth(web),sw=doc.getTextWidth(sep);
+    const xe=W-M-ew,xs=xe-sw,xw=xs-ww;
+    if(web)doc.textWithLink(web,xw,292,{url:CFG.website});
+    doc.text(sep,xs,292);
+    if(em)doc.textWithLink(em,xe,292,{url:"mailto:"+em});
+  }
+  return doc.output("arraybuffer");
+}
+
+/* ---------- Events ---------- */
+document.addEventListener("click",async ev=>{
+  const v=ev.target.closest("[data-view]");
+  if(v){ev.preventDefault();S.view=v.dataset.view;try{location.hash=S.view==="results"||S.view==="about"?S.view:""}catch(e){}render();window.scrollTo(0,0);return}
+  const b=ev.target.closest("[data-act]");if(!b)return;
+  const act=b.dataset.act;
+  if(act==="start"){S.shared=false;S.step=0;S.result=null;S.ans={};S.team="";S.level="";S.access="";S.saveMsg="";S.view="take";render()}
+  else if(act==="showprev"&&S.existing&&S.existing.full){S.result=S.existing.full;S.saveMsg="";render()}
+  else if(act==="back"){if(S.step>0){S.step--}else{S.step=-1}render()}
+  else if(act==="next"&&stepComplete()){
+    if(S.step<STEPS-1){S.step++;render();window.scrollTo(0,0)}
+    else{const res=compute(S.ans);S.result=res;S.saveMsg="Saving…";render();await saveResult(res);render();window.scrollTo(0,0)}
+  }
+  else if(act==="xlsx"){
+    if(typeof XLSX==="undefined"){toast("The Excel library didn't load. Use the CSV button instead.");return}
+    const out=XLSX.write(buildWorkbook(S.rows),{bookType:"xlsx",type:"array"});
+    saveFile("ai-readiness-results.xlsx",new Blob([out],{type:"application/octet-stream"}));
+  }
+  else if(act==="share"){
+    const ck=document.getElementById("shareok");if(!ck||!ck.checked||!S.result){toast("Tick the box first.");return}
+    const r=S.result;b.disabled=true;
+    try{
+      const resp=await fetch("/api/ai-check/submit",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({room:SHARE_ROOM,overall:r.overall,areas:r.pillars,sector:S.team,level:S.level,access:S.access})});
+      if(!resp.ok)throw new Error(resp.status);
+      S.shared=true;render();toast("Shared. Thank you.");
+    }catch(e){b.disabled=false;toast("Could not share. Check your connection and try again.")}
+  }
+  else if(act==="pdf"){
+    if(!window.jspdf){toast("The PDF library didn't load. Reload the page and try again.");return}
+    if(!S.result)return;
+    let out;try{out=buildPDF(S.result)}catch(e){toast("Couldn't build the PDF.");return}
+    saveFile("ai-readiness-result-"+new Date().toISOString().slice(0,10)+".pdf",out);
+  }
+  else if(act==="csv")saveFile("ai-readiness-responses.csv",csvText(exportAOA(S.rows)));
+});
+document.addEventListener("change",ev=>{
+  const t=ev.target;
+  if(t.id==="shareok"){const sb=document.getElementById("sharebtn");if(sb)sb.disabled=!t.checked;return}
+  if(t.id==="team"){S.team=t.value}
+  else if(t.id==="level"){S.level=t.value}
+  else if(t.id==="access"){S.access=t.value}
+  else if(t.type==="radio"){S.ans[t.name]=Number(t.value);t.closest("fieldset").querySelectorAll("label.opt").forEach(l=>l.classList.toggle("on",l.contains(t)))}
+  else return;
+  const n=$("#next");if(n)n.disabled=!stepComplete();
+});
+
+/* ---------- Boot ---------- */
+S.step=-1;
+loadConfig().then(()=>{document.title=CFG.title;render()});
+loadBenchmarks();
+(async()=>{
+  const c=window.claude;
+  if(!c||!c.use){return}
+  try{
+    const [db,user,dl]=await Promise.all([c.use("db"),c.use("user"),c.use("downloads")]);
+    S.db=db;S.user=user;S.dl=dl;
+    if(user){try{S.uid=await user.id()}catch(e){}try{S.canEdit=!!user.canEdit()}catch(e){}}
+    if(db&&S.uid){
+      try{
+        const snap=await db.doc("responses/"+S.uid).get();
+        if(snap.exists){const d=cleanRow(snap.data());S.existing={overall:d.overall,tier:d.tier,ts:d.ts,full:{q:d.q,pillars:d.pillars,overall:d.overall,tier:d.tier}}}
+      }catch(e){}
+    }
+    if(db&&S.canEdit){
+      db.collection("responses").onSnapshot(snap=>{S.rows=snap.docs.map(d=>cleanRow(d.data()||{}));if(S.view==="results")render()},()=>{});
+    }
+    if(S.canEdit&&location.hash==="#results")S.view="results";
+    else if(location.hash==="#about")S.view="about";
+  }catch(e){}
+  render();
+})();
+</script>
+
+</body></html>
+</body>
+</html>

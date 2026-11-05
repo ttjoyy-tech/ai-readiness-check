@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>AI check results</title>
+<meta name="description" content="Live, anonymous results from the AI Readiness Check." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#2b5a87" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
+<style>
+/* Room dashboard. paper, ink, denim; one ochre rule; square corners; hairlines. Built to read on a projector. */
+:root{
+  --bg:#fbfaf7; --surface:#efeeea; --ink:#15181a; --ink-soft:#5b5f60; --line:#dcdbd5;
+  --accent:#2b5a87; --accent-ink:#ffffff; --accent-tint:#dfe8f0; --ochre:#b8731c;
+  --t-lag:#b5483a;
+  --t-fol:#d9962b;
+  --t-cha:#2f7f7a;
+  --t-pace:#2b5a87;
+  --f:"Montserrat",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#101315; --surface:#181c1f; --ink:#f1efe9; --ink-soft:#a5a8a8; --line:#2a2f32;
+    --accent:#8fb4d9; --accent-ink:#101315; --accent-tint:#1b2733; --ochre:#e0a04a; color-scheme:dark;
+  }
+}
+*{box-sizing:border-box;border-radius:0}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:17px;line-height:1.65;
+  padding-block:0 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:70rem;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+h1,h2,h3{font-weight:300;text-transform:uppercase;letter-spacing:.05em;margin:0;line-height:1.2;text-wrap:balance}
+h1{font-size:clamp(1.8rem,5vw,3rem);letter-spacing:.1em}
+h2{font-size:clamp(1.1rem,2.6vw,1.45rem)}
+p{margin:0}
+a{color:var(--accent)}
+.muted{color:var(--ink-soft)} .small{font-size:.85rem;line-height:1.55}
+.eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)}
+header.top{padding-block:26px 20px;border-bottom:2px solid var(--ochre);display:flex;flex-direction:column;gap:10px}
+.bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{font:500 .72rem var(--f);letter-spacing:.16em;text-transform:uppercase;padding:12px 20px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.live{display:inline-flex;gap:8px;align-items:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.live i{width:9px;height:9px;background:var(--ochre);display:inline-block}
+section{border-top:1px solid var(--line);padding-top:26px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.tile{background:var(--bg);padding:20px;display:flex;flex-direction:column;gap:2px}
+.tile .v{font-weight:300;font-size:clamp(2.4rem,7vw,4.2rem);line-height:1.05;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:72px;border:1px solid var(--line)}
+.stack div{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:1.5rem;min-width:0;overflow:hidden}
+.t-lag{background:var(--t-lag)} .t-fol{background:var(--t-fol)} .t-cha{background:var(--t-cha)} .t-pace{background:var(--t-pace)}
+.stack .t-fol{color:#15181a}
+.tcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:12px}
+.tcard{padding:22px 20px;color:#fff;display:flex;flex-direction:column;gap:2px}
+.tcard.t-fol{color:#15181a}
+.tcard .tn{font-size:.8rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.tcard .td{font-size:1rem;font-weight:400}
+.tcard .tv{font-size:4rem;font-weight:300;line-height:1.1;margin-top:8px}
+.tcard .tp{font-size:.95rem;font-weight:500}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.88rem;color:var(--ink-soft)}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.row{display:grid;grid-template-columns:minmax(260px,400px) 1fr 100px;gap:10px 28px;align-items:center;padding:14px 0}
+.row .nm{font-weight:600;font-size:1.7rem;line-height:1.2}
+.row .nm span{display:block;font-weight:400;font-size:1.05rem;line-height:1.4;color:var(--ink-soft);margin-top:4px}
+@media(max-width:760px){.row{grid-template-columns:1fr 70px}.row .nm{grid-column:1/-1;font-size:1.3rem}}
+.track{position:relative;height:52px;background:linear-gradient(90deg,color-mix(in srgb,var(--t-lag) 14%,var(--surface)) 0 30.5%,color-mix(in srgb,var(--t-fol) 14%,var(--surface)) 30.5% 60.5%,color-mix(in srgb,var(--t-cha) 14%,var(--surface)) 60.5% 85.5%,color-mix(in srgb,var(--t-pace) 14%,var(--surface)) 85.5% 100%)}
+.track .fill{position:absolute;inset:0 auto 0 0;border-right:2px solid var(--bg)}
+.row .v{text-align:right;font-size:2.6rem;font-weight:600;font-variant-numeric:tabular-nums}
+.row .nm span.chip{display:inline-block;font-size:1.05rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 16px;margin-top:10px;background:var(--t-cha);color:#fff}
+.row .nm span.chip.low{background:var(--t-lag);color:#fff}
+.hist{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;align-items:end;height:150px}
+.hist div{background:var(--accent);min-height:2px;position:relative}
+.hist span{position:absolute;left:0;right:0;top:-22px;text-align:center;font-size:.78rem;color:var(--ink-soft)}
+.hlab{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;font-size:.72rem;color:var(--ink-soft);text-align:center}
+ul.sowhat{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:10px;font-size:1.05rem}
+.empty{border:1px solid var(--line);padding:34px;text-align:center;color:var(--ink-soft)}
+.empty b{display:block;font-weight:300;font-size:2.4rem;color:var(--ink);line-height:1.1;margin-bottom:6px}
+form.code{display:flex;flex-wrap:wrap;gap:10px}
+form.code input{font:400 1rem var(--f);padding:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);min-width:14rem}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 18px;font-size:.9rem;opacity:0;pointer-events:none;transition:opacity .2s}
+#toast.show{opacity:1}
+@media (max-width:620px){.row{grid-template-columns:1fr 56px}.row .nm{grid-column:1/-1}}
+@media print{
+  :root{--bg:#fff;--surface:#efeeea;--ink:#15181a;--ink-soft:#5b5f60;--line:#dcdbd5}
+  body{font-size:12px;padding:0}.bar,.btn,#toast,form.code{display:none!important}
+  .wrap{gap:18px}section{break-inside:avoid;padding-top:14px}.tile .v{font-size:2.2rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app">
+  <header class="top">
+    <p class="eyebrow">AI Readiness Check</p>
+    <h1>AI check results</h1>
+    <p class="muted">How ready are we to use AI well, safely and responsibly in our work?</p>
+    <div class="bar" id="bar" hidden>
+      <span class="live"><i></i><span id="stamp">Live</span></span>
+      <button class="btn ghost" type="button" id="csv">Download CSV</button>
+      <button class="btn ghost" type="button" id="pdf">Save as PDF</button>
+      <button class="btn" type="button" id="refresh">Refresh now</button>
+    </div>
+  </header>
+  <main id="main"></main>
+  <p class="small muted">Only scores are shared, and only by people who chose to share them with the administrator: the overall score and the five area scores. No names, emails or answers. Results are deleted after 30 days.</p>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+const AREAS=[["use","Everyday use","How AI shows up in real work","Pick one real process to pilot (Step 1)."],
+ ["skill","Skills & judgement","Good results, and knowing when to doubt them","Check outputs before they travel (block 5, safe by design)."],
+ ["data","Data & security","Handling information safely","Name what data is in and out of bounds (block 5)."],
+ ["resp","Responsible use","Accountability, honesty and risk awareness","Name who is accountable for the pilot (block 5 and the ask)."],
+ ["mind","Mindset & support","Learning habits and the backing you have","Build the coalition and make the ask (Step 1 and the pitch)."]];
+const TIERS=[["Starting","t-lag","Just getting going"],["Building","t-fol","Gaining confidence"],["Leading","t-cha","Confident, consistent"],["Pacesetting","t-pace","Setting the standard"]];
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const q=new URLSearchParams(location.search);
+let room=(q.get("code")||"").toLowerCase().trim();
+const KEY=(q.get("key")||"").trim();
+let last=null,timer=null;
+const okRoom=r=>/^[a-z0-9][a-z0-9-]{2,39}$/.test(r);
+const tierCls=n=>n>=86?"fill t-pace":n>=61?"fill t-cha":n>=31?"fill t-fol":"fill t-lag";
+const tierName=n=>n>=86?"Pacesetting":n>=61?"Leading":n>=31?"Building":"Starting";
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove("show"),2600)}
+
+function askCode(msg){
+  $("#bar").hidden=true;
+  $("#main").innerHTML=`<section><h2>Enter the room code</h2><p class="muted">${esc(msg||"Enter the room code, for example team-a.")}</p>
+    <form class="code" id="cf"><input id="ci" type="text" autocomplete="off" autocapitalize="none" placeholder="Room code" aria-label="Room code"><button class="btn" type="submit">Show results</button></form></section>`;
+  $("#cf").addEventListener("submit",e=>{e.preventDefault();const v=$("#ci").value.toLowerCase().trim();if(!okRoom(v)){toast("Use letters, numbers and dashes, 3 to 40 characters.");return}
+    location.href="/room?code="+encodeURIComponent(v)+"&key="+encodeURIComponent(KEY)});
+}
+function view(d){
+  if(!d.ready){
+    return `<div class="empty"><b>${d.n} of ${d.min}</b>${d.n===1?"person has":"people have"} shared a score. Results appear when ${d.min} people have shared, so nobody can be identified.</div>`;
+  }
+  const lowAvg=[...AREAS].sort((a,b)=>d.areaAvg[a[0]]-d.areaAvg[b[0]]);
+  const lo=lowAvg[0],hi=lowAvg[lowAvg.length-1];
+  const nBuild=d.tiers.Starting+d.tiers.Building;
+  const pct=n=>Math.round(n/d.n*100);
+  const topLow=[...AREAS].sort((a,b)=>d.lowest[b[0]]-d.lowest[a[0]]).slice(0,2);
+  const hmax=Math.max(1,...d.hist);
+  return `
+  <div class="tiles">
+    <div class="tile"><span class="eyebrow">Room average</span><span class="v">${d.overall}<span class="muted" style="font-size:.4em"> / 100</span></span><span class="muted small">${tierName(d.overall)}</span></div>
+    <div class="tile"><span class="eyebrow">Strongest area</span><span class="v" style="font-size:1.6rem;padding-top:.7rem">${esc(hi[1])}</span><span class="muted small">Average ${d.areaAvg[hi[0]]}</span></div>
+    <div class="tile"><span class="eyebrow">Biggest gap</span><span class="v" style="font-size:1.6rem;padding-top:.7rem">${esc(lo[1])}</span><span class="muted small">Average ${d.areaAvg[lo[0]]}</span></div>
+  </div>
+  <section>
+    <div class="stack" role="img" aria-label="People by tier">${TIERS.map(t=>d.tiers[t[0]]?`<div class="${t[1]}" style="width:${d.tiers[t[0]]/d.n*100}%">${d.tiers[t[0]]}</div>`:"").join("")}</div>
+    <div class="tcards">${TIERS.map(t=>`<div class="tcard ${t[1]}"><span class="tn">${t[0]}</span><span class="td">${t[2]}</span><span class="tv">${d.tiers[t[0]]}</span><span class="tp">${pct(d.tiers[t[0]])}% of the room</span></div>`).join("")}</div>
+  </section>
+  <section><h2>By area: the room average</h2>
+    ${AREAS.map(a=>{const v=d.areaAvg[a[0]];return `<div class="row"><div class="nm">${esc(a[1])}<span>${esc(a[2])}</span>${a===lo?'<span class="chip low">Biggest gap</span>':a===hi?'<span class="chip">Strongest</span>':""}</div><div class="track" role="img" aria-label="${esc(a[1])}: ${v} out of 100"><div class="${tierCls(v)}" style="width:${Math.max(2,v)}%"></div></div><div class="v">${v}</div></div>`}).join("")}
+  </section>
+  <section><h2>What this means for the session</h2>
+    <ul class="sowhat">
+      <li>The room averages <b>${d.overall} out of 100</b>. ${nBuild?`${pct(nBuild)}% of people (${nBuild} of ${d.n}) are in Starting or Building, so there is plenty of room to grow.`:"Everyone is at Leading or above."}</li>
+      <li>The room is strongest on <b>${esc(hi[1])}</b> and has the biggest gap on <b>${esc(lo[1])}</b>.</li>
+      <li>Most common lowest area: <b>${esc(topLow[0][1])}</b> (${d.lowest[topLow[0][0]]} of ${d.n} people)${topLow[1]&&d.lowest[topLow[1][0]]?`, then <b>${esc(topLow[1][1])}</b> (${d.lowest[topLow[1][0]]})`:""}.</li>
+      <li>Where to put the energy: ${esc(lo[3])}</li>
+    </ul>
+  </section>
+  <section><h2>All scores</h2>
+    <div class="hist" role="img" aria-label="Number of people by overall score">${d.hist.map(h=>`<div style="height:${h/hmax*100}%"><span>${h||""}</span></div>`).join("")}</div>
+    <div class="hlab">${d.hist.map((_,i)=>`<span>${i*10}${i===9?"–100":"s"}</span>`).join("")}</div>
+  </section>`;
+}
+async function load(manual){
+  if(!okRoom(room)){askCode();return}
+  $("#bar").hidden=false;
+  try{
+    const r=await fetch("/api/ai-check/results?room="+encodeURIComponent(room)+"&key="+encodeURIComponent(KEY),{cache:"no-store"});
+    if(r.status===401){clearInterval(timer);$("#bar").hidden=true;$("#main").innerHTML='<div class="empty">This page needs the admin key. Open the full link that includes <b style="display:inline;font-size:1em">&amp;key=</b>.</div>';return}
+    if(!r.ok)throw new Error(r.status);
+    const d=await r.json();last=d;
+    $("#main").innerHTML=view(d);
+    $("#stamp").textContent="Live · updated "+new Date().toLocaleTimeString("en-AU",{hour:"numeric",minute:"2-digit",second:"2-digit"});
+    if(manual)toast("Updated");
+  }catch(e){
+    $("#stamp").textContent="Reconnecting…";
+    if(!last)$("#main").innerHTML='<div class="empty">Results could not be loaded. Check your connection. This page will keep trying.</div>';
+  }
+}
+function csv(){
+  if(!last||!last.ready){toast("Nothing to download yet");return}
+  const head=["Overall",...AREAS.map(a=>a[1])];
+  const lines=[head.join(",")].concat(last.rows.map(r=>[r.overall,...AREAS.map(a=>r[a[0]])].join(",")));
+  const blob=new Blob([lines.join("\r\n")],{type:"text/csv"});
+  const u=URL.createObjectURL(blob);const a=document.createElement("a");a.href=u;a.download="ai-check-"+room+"-scores.csv";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),4000);
+}
+$("#csv").addEventListener("click",csv);
+$("#pdf").addEventListener("click",()=>window.print());
+$("#refresh").addEventListener("click",()=>load(true));
+load();
+timer=setInterval(()=>{if(!document.hidden)load()},5000);
+</script>
+</body>
+</html>

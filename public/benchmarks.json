@@ -1,0 +1,36 @@
+{
+  "updated": "2026-11-05",
+  "published": {
+    "name": "Cisco AI Readiness Index, inaugural edition",
+    "who": "8,161 senior business and IT leaders; organisations with 500 or more staff",
+    "url": "https://www.cisco.com/c/m/en_us/solutions/ai/readiness-index/methodology.html",
+    "tiers": {
+      "Pacesetting": 14,
+      "Leading": 34,
+      "Building": 48,
+      "Starting": 4
+    }
+  },
+  "facts": [
+    {
+      "text": "About 13% of organisations were rated Pacesetting in the Cisco AI Readiness Index 2025 (over 8,000 leaders, 30 markets).",
+      "url": "https://www.cisco.com/c/m/en_us/solutions/ai/readiness-index/methodology.html"
+    },
+    {
+      "text": "Workera's 2026 benchmark (88,753 assessments) found 13% of employees were Accomplished in agentic AI skills before any upskilling.",
+      "url": "https://www.workera.ai/guides-reports/what-88-000-assessments-reveal-about-enterprise-ai-readiness"
+    }
+  ],
+  "own": {
+    "label": "people who chose to share their scores",
+    "n": 0,
+    "overall": null,
+    "areas": {
+      "use": null,
+      "skill": null,
+      "data": null,
+      "resp": null,
+      "mind": null
+    }
+  }
+}

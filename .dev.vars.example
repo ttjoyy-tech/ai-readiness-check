@@ -1,0 +1,2 @@
+# Copy to .dev.vars for local development. For a live site, set it with: npx wrangler secret put ADMIN_KEY
+ADMIN_KEY=choose-a-long-random-value
